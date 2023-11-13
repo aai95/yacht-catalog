@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+final class YachtCatalogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

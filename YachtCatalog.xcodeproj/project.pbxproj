@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8E2412C32B02336000EF9C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2412C22B02336000EF9C07 /* AppDelegate.swift */; };
-		8E2412C72B02336000EF9C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2412C62B02336000EF9C07 /* ViewController.swift */; };
+		8E2412C72B02336000EF9C07 /* YachtCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2412C62B02336000EF9C07 /* YachtCatalogViewController.swift */; };
 		8E2412CC2B02336200EF9C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2412CB2B02336200EF9C07 /* Assets.xcassets */; };
 		8E2412CF2B02336200EF9C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2412CD2B02336200EF9C07 /* LaunchScreen.storyboard */; };
+		8E9CDCAD2B027520002FAA67 /* YachtCatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCAC2B027520002FAA67 /* YachtCatalogModel.swift */; };
+		8E9CDCAF2B027568002FAA67 /* YachtCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCAE2B027568002FAA67 /* YachtCatalogViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E2412BF2B02336000EF9C07 /* YachtCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YachtCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2412C22B02336000EF9C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E2412C62B02336000EF9C07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E2412C62B02336000EF9C07 /* YachtCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtCatalogViewController.swift; sourceTree = "<group>"; };
 		8E2412CB2B02336200EF9C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2412CE2B02336200EF9C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E2412D02B02336200EF9C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9CDCAC2B027520002FAA67 /* YachtCatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtCatalogModel.swift; sourceTree = "<group>"; };
+		8E9CDCAE2B027568002FAA67 /* YachtCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtCatalogViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,55 @@
 		8E2412C12B02336000EF9C07 /* YachtCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				8E9CDCA72B027314002FAA67 /* UserInterfaces */,
 				8E2412C22B02336000EF9C07 /* AppDelegate.swift */,
-				8E2412C62B02336000EF9C07 /* ViewController.swift */,
-				8E2412CB2B02336200EF9C07 /* Assets.xcassets */,
 				8E2412CD2B02336200EF9C07 /* LaunchScreen.storyboard */,
+				8E2412CB2B02336200EF9C07 /* Assets.xcassets */,
 				8E2412D02B02336200EF9C07 /* Info.plist */,
 			);
 			path = YachtCatalog;
+			sourceTree = "<group>";
+		};
+		8E9CDCA72B027314002FAA67 /* UserInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CDCA82B027384002FAA67 /* YachtCatalog */,
+			);
+			path = UserInterfaces;
+			sourceTree = "<group>";
+		};
+		8E9CDCA82B027384002FAA67 /* YachtCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CDCA92B027409002FAA67 /* Model */,
+				8E9CDCAA2B02742D002FAA67 /* View */,
+				8E9CDCAB2B027447002FAA67 /* ViewModel */,
+			);
+			path = YachtCatalog;
+			sourceTree = "<group>";
+		};
+		8E9CDCA92B027409002FAA67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CDCAC2B027520002FAA67 /* YachtCatalogModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9CDCAA2B02742D002FAA67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E2412C62B02336000EF9C07 /* YachtCatalogViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9CDCAB2B027447002FAA67 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E9CDCAE2B027568002FAA67 /* YachtCatalogViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2412C72B02336000EF9C07 /* ViewController.swift in Sources */,
+				8E2412C72B02336000EF9C07 /* YachtCatalogViewController.swift in Sources */,
 				8E2412C32B02336000EF9C07 /* AppDelegate.swift in Sources */,
+				8E9CDCAF2B027568002FAA67 /* YachtCatalogViewModel.swift in Sources */,
+				8E9CDCAD2B027520002FAA67 /* YachtCatalogModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
