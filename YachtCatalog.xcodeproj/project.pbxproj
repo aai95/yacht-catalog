@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E2412C32B02336000EF9C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2412C22B02336000EF9C07 /* AppDelegate.swift */; };
-		8E2412C52B02336000EF9C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2412C42B02336000EF9C07 /* SceneDelegate.swift */; };
 		8E2412C72B02336000EF9C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2412C62B02336000EF9C07 /* ViewController.swift */; };
-		8E2412CA2B02336000EF9C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2412C82B02336000EF9C07 /* Main.storyboard */; };
 		8E2412CC2B02336200EF9C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2412CB2B02336200EF9C07 /* Assets.xcassets */; };
 		8E2412CF2B02336200EF9C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2412CD2B02336200EF9C07 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		8E2412BF2B02336000EF9C07 /* YachtCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YachtCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2412C22B02336000EF9C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E2412C42B02336000EF9C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E2412C62B02336000EF9C07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E2412C92B02336000EF9C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E2412CB2B02336200EF9C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2412CE2B02336200EF9C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E2412D02B02336200EF9C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,9 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2412C22B02336000EF9C07 /* AppDelegate.swift */,
-				8E2412C42B02336000EF9C07 /* SceneDelegate.swift */,
 				8E2412C62B02336000EF9C07 /* ViewController.swift */,
-				8E2412C82B02336000EF9C07 /* Main.storyboard */,
 				8E2412CB2B02336200EF9C07 /* Assets.xcassets */,
 				8E2412CD2B02336200EF9C07 /* LaunchScreen.storyboard */,
 				8E2412D02B02336200EF9C07 /* Info.plist */,
@@ -127,7 +121,6 @@
 			files = (
 				8E2412CF2B02336200EF9C07 /* LaunchScreen.storyboard in Resources */,
 				8E2412CC2B02336200EF9C07 /* Assets.xcassets in Resources */,
-				8E2412CA2B02336000EF9C07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +133,12 @@
 			files = (
 				8E2412C72B02336000EF9C07 /* ViewController.swift in Sources */,
 				8E2412C32B02336000EF9C07 /* AppDelegate.swift in Sources */,
-				8E2412C52B02336000EF9C07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E2412C82B02336000EF9C07 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E2412C92B02336000EF9C07 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E2412CD2B02336200EF9C07 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +276,6 @@
 				INFOPLIST_FILE = YachtCatalog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +306,6 @@
 				INFOPLIST_FILE = YachtCatalog/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
