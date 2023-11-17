@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         window = UIWindow()
-        window?.rootViewController = YachtCatalogViewController()
+        window?.rootViewController = UINavigationController(rootViewController: YachtCatalogViewController())
         window?.makeKeyAndVisible()
         
         return true

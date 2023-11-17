@@ -91,5 +91,12 @@ extension YachtCatalogViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailController = YachtDetailViewController(
+            viewModel: YachtDetailViewModel(
+                detailModel: YachtDetailModel(from: viewModel.catalogModels[indexPath.row])
+            )
+        )
+        navigationController?.pushViewController(detailController, animated: true)
     }
 }

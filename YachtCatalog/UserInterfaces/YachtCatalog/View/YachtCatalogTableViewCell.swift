@@ -9,7 +9,7 @@ final class YachtCatalogTableViewCell: UITableViewCell, DefaultReusableCell {
             guard let catalogModel = catalogModel else {
                 return
             }
-            coverImage.image = UIImage(named: "\(catalogModel.id).jpg")
+            coverImage.image = UIImage(named: "\(catalogModel.coverLink).jpg")
             nameLabel.text = catalogModel.name
         }
     }
