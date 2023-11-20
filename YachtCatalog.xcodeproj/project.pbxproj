@@ -21,6 +21,8 @@
 		8E9CDCC02B04CED0002FAA67 /* YachtDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCBF2B04CED0002FAA67 /* YachtDetailViewModel.swift */; };
 		8E9CDCC22B05003B002FAA67 /* YachtDetailCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCC12B05003B002FAA67 /* YachtDetailCollectionViewHeader.swift */; };
 		8E9CDCC52B0519DB002FAA67 /* CollectionWidthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCC42B0519DB002FAA67 /* CollectionWidthParameters.swift */; };
+		8E9CDCC82B08F20D002FAA67 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9CDCC72B08F20D002FAA67 /* Kingfisher */; };
+		8E9CDCCA2B0A1EC1002FAA67 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCC92B0A1EC1002FAA67 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		8E9CDCBF2B04CED0002FAA67 /* YachtDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtDetailViewModel.swift; sourceTree = "<group>"; };
 		8E9CDCC12B05003B002FAA67 /* YachtDetailCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtDetailCollectionViewHeader.swift; sourceTree = "<group>"; };
 		8E9CDCC42B0519DB002FAA67 /* CollectionWidthParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionWidthParameters.swift; sourceTree = "<group>"; };
+		8E9CDCC92B0A1EC1002FAA67 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9CDCC82B08F20D002FAA67 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9CDCC42B0519DB002FAA67 /* CollectionWidthParameters.swift */,
+				8E9CDCC92B0A1EC1002FAA67 /* DataProvider.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -195,6 +200,9 @@
 			dependencies = (
 			);
 			name = YachtCatalog;
+			packageProductDependencies = (
+				8E9CDCC72B08F20D002FAA67 /* Kingfisher */,
+			);
 			productName = YachtCatalog;
 			productReference = 8E2412BF2B02336000EF9C07 /* YachtCatalog.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 8E2412B62B02336000EF9C07;
+			packageReferences = (
+				8E9CDCC62B08F20D002FAA67 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8E2412C02B02336000EF9C07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 				8E9CDCAF2B027568002FAA67 /* YachtCatalogViewModel.swift in Sources */,
 				8E9CDCC52B0519DB002FAA67 /* CollectionWidthParameters.swift in Sources */,
 				8E9CDCAD2B027520002FAA67 /* YachtCatalogModel.swift in Sources */,
+				8E9CDCCA2B0A1EC1002FAA67 /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +486,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E9CDCC62B08F20D002FAA67 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 7.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E9CDCC72B08F20D002FAA67 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E9CDCC62B08F20D002FAA67 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E2412B72B02336000EF9C07 /* Project object */;
 }

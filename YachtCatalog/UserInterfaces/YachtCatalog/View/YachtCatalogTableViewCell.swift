@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 final class YachtCatalogTableViewCell: UITableViewCell, DefaultReusableCell {
     
@@ -9,7 +10,9 @@ final class YachtCatalogTableViewCell: UITableViewCell, DefaultReusableCell {
             guard let catalogModel = catalogModel else {
                 return
             }
-            coverImage.image = UIImage(named: "\(catalogModel.coverLink).jpg")
+            coverImage.kf.indicatorType = .activity
+            coverImage.kf.setImage(with: URL(string: catalogModel.coverLink))
+            
             nameLabel.text = catalogModel.name
         }
     }
@@ -27,7 +30,9 @@ final class YachtCatalogTableViewCell: UITableViewCell, DefaultReusableCell {
     }()
     
     private let nameLabel: UILabel = {
-        return UILabel()
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 16, weight: .medium)
+        return label
     }()
     
     // MARK: Initializers
@@ -43,6 +48,14 @@ final class YachtCatalogTableViewCell: UITableViewCell, DefaultReusableCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Override functions
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        coverImage.kf.cancelDownloadTask()
+    }
+    
     // MARK: Private functions
     
     private func addSubviews() {
@@ -55,7 +68,7 @@ final class YachtCatalogTableViewCell: UITableViewCell, DefaultReusableCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(equalToConstant: 187),
+            contentView.heightAnchor.constraint(equalToConstant: 180),
             
             coverImage.topAnchor.constraint(equalTo: contentView.topAnchor),
             coverImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),

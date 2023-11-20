@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultReusableCell {
     
@@ -9,8 +10,10 @@ final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultRe
             guard let detailModel = detailModel else {
                 return
             }
-            coverImage.image = UIImage(named: "\(detailModel.coverLink).jpg")
-            nameLabel.text = detailModel.name
+            coverImage.kf.indicatorType = .activity
+            coverImage.kf.setImage(with: URL(string: detailModel.coverLink))
+            
+            nameLabel.text = detailModel.name.uppercased()
             descriptionLabel.text = detailModel.description
         }
     }
@@ -24,16 +27,20 @@ final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultRe
         image.layer.cornerRadius = 12
         image.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
     private let nameLabel: UILabel = {
-        return UILabel()
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 16, weight: .bold)
+        return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         
+        label.font = .systemFont(ofSize: 16, weight: .regular)
         label.numberOfLines = 0
         
         return label
@@ -61,7 +68,8 @@ final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultRe
             nameLabel.trailingAnchor.constraint(equalTo: mainStack.trailingAnchor, constant: -16),
             
             descriptionLabel.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor, constant: 16),
-            descriptionLabel.trailingAnchor.constraint(equalTo: mainStack.trailingAnchor, constant: -16),
+            // workaround to get correct display of label and remove UIKit constraints conflict from log
+            descriptionLabel.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 32),
         ])
         return mainStack
     }()
@@ -77,6 +85,14 @@ final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultRe
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Override functions
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        coverImage.kf.cancelDownloadTask()
     }
     
     // MARK: Private functions

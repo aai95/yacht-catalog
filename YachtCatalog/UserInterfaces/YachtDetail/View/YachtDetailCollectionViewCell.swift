@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusableCell {
     
@@ -9,7 +10,8 @@ final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusable
             guard let photoLink = photoLink else {
                 return
             }
-            yachtImage.image = UIImage(named: "\(photoLink).jpg")
+            yachtImage.kf.indicatorType = .activity
+            yachtImage.kf.setImage(with: URL(string: photoLink))
         }
     }
     
@@ -21,6 +23,7 @@ final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusable
         image.layer.masksToBounds = true
         image.layer.cornerRadius = 12
         
+        image.contentMode = .scaleAspectFill
         return image
     }()
     
@@ -35,6 +38,14 @@ final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusable
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Override functions
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        yachtImage.kf.cancelDownloadTask()
     }
     
     // MARK: Private functions
