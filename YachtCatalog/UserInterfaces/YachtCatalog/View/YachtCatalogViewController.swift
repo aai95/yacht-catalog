@@ -27,6 +27,7 @@ final class YachtCatalogViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        setupNavigationBar()
         addSubviews()
         activateConstraints()
         subscribeToPublishers()
@@ -41,6 +42,60 @@ final class YachtCatalogViewController: UIViewController {
     }
     
     // MARK: Private functions
+    
+    @objc
+    private func didTapSortButton() {
+        let controller = UIAlertController(
+            title: "Sort by size",
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+        controller.addAction(
+            UIAlertAction(
+                title: "Ascending",
+                style: .default,
+                handler: { [weak self] _ in
+                    guard let self = self else {
+                        return
+                    }
+                    self.viewModel.sortCatalogs(by: .ascending)
+                }
+            )
+        )
+        controller.addAction(
+            UIAlertAction(
+                title: "Descending",
+                style: .default,
+                handler: { [weak self] _ in
+                    guard let self = self else {
+                        return
+                    }
+                    self.viewModel.sortCatalogs(by: .descending)
+                }
+            )
+        )
+        controller.addAction(
+            UIAlertAction(
+                title: "Cancel",
+                style: .cancel
+            )
+        )
+        present(controller, animated: true)
+    }
+    
+    private func setupNavigationBar() {
+        guard let bar = navigationController?.navigationBar else {
+            return
+        }
+        let sortButton = UIBarButtonItem(
+            image: UIImage(systemName: "text.justify"),
+            style: .plain,
+            target: self,
+            action: #selector(didTapSortButton)
+        )
+        bar.topItem?.setRightBarButton(sortButton, animated: false)
+        bar.tintColor = .black
+    }
     
     private func addSubviews() {
         view.addSubview(catalogTable)

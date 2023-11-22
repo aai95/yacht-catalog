@@ -23,6 +23,7 @@
 		8E9CDCC52B0519DB002FAA67 /* CollectionWidthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCC42B0519DB002FAA67 /* CollectionWidthParameters.swift */; };
 		8E9CDCC82B08F20D002FAA67 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9CDCC72B08F20D002FAA67 /* Kingfisher */; };
 		8E9CDCCA2B0A1EC1002FAA67 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCC92B0A1EC1002FAA67 /* DataProvider.swift */; };
+		8E9CDCCE2B0E7F17002FAA67 /* SortTypeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCCD2B0E7F17002FAA67 /* SortTypeStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		8E9CDCC12B05003B002FAA67 /* YachtDetailCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtDetailCollectionViewHeader.swift; sourceTree = "<group>"; };
 		8E9CDCC42B0519DB002FAA67 /* CollectionWidthParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionWidthParameters.swift; sourceTree = "<group>"; };
 		8E9CDCC92B0A1EC1002FAA67 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8E9CDCCD2B0E7F17002FAA67 /* SortTypeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTypeStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				8E9CDCC42B0519DB002FAA67 /* CollectionWidthParameters.swift */,
 				8E9CDCC92B0A1EC1002FAA67 /* DataProvider.swift */,
+				8E9CDCCD2B0E7F17002FAA67 /* SortTypeStorage.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				8E9CDCC22B05003B002FAA67 /* YachtDetailCollectionViewHeader.swift in Sources */,
 				8E9CDCAF2B027568002FAA67 /* YachtCatalogViewModel.swift in Sources */,
 				8E9CDCC52B0519DB002FAA67 /* CollectionWidthParameters.swift in Sources */,
+				8E9CDCCE2B0E7F17002FAA67 /* SortTypeStorage.swift in Sources */,
 				8E9CDCAD2B027520002FAA67 /* YachtCatalogModel.swift in Sources */,
 				8E9CDCCA2B0A1EC1002FAA67 /* DataProvider.swift in Sources */,
 			);
