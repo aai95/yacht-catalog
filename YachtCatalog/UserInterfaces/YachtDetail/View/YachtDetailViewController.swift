@@ -121,7 +121,7 @@ extension YachtDetailViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let availableWidth = collectionView.bounds.width - widthParameters.widthInsets
-        let cellWidth =  availableWidth / CGFloat(widthParameters.cellsNumber)
+        let cellWidth = availableWidth / CGFloat(widthParameters.cellsNumber)
         return CGSize(width: cellWidth, height: cellWidth)
     }
     

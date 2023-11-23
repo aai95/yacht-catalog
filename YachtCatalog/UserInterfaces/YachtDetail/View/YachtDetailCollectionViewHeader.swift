@@ -46,32 +46,13 @@ final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultRe
         return label
     }()
     
-    private lazy var mainStack: UIStackView = {
-        let mainStack = UIStackView()
+    private let mainStack: UIStackView = {
+        let stack = UIStackView()
         
-        mainStack.axis = .vertical
-        mainStack.alignment = .center
+        stack.axis = .vertical
+        stack.alignment = .center
         
-        mainStack.addArrangedSubview(coverImage)
-        mainStack.addArrangedSubview(nameLabel)
-        mainStack.addArrangedSubview(descriptionLabel)
-        
-        mainStack.setCustomSpacing(16, after: coverImage)
-        mainStack.setCustomSpacing(8, after: nameLabel)
-        
-        NSLayoutConstraint.activate([
-            coverImage.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor),
-            coverImage.trailingAnchor.constraint(equalTo: mainStack.trailingAnchor),
-            coverImage.heightAnchor.constraint(equalToConstant: 300),
-            
-            nameLabel.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor, constant: 16),
-            nameLabel.trailingAnchor.constraint(equalTo: mainStack.trailingAnchor, constant: -16),
-            
-            descriptionLabel.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor, constant: 16),
-            // workaround to get correct display of label and remove UIKit constraints conflict from log
-            descriptionLabel.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 32),
-        ])
-        return mainStack
+        return stack
     }()
     
     // MARK: Initializers
@@ -98,10 +79,30 @@ final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultRe
     // MARK: Private functions
     
     private func addSubviews() {
-        addSubview(mainStack)
+        mainStack.addArrangedSubview(coverImage)
+        mainStack.addArrangedSubview(nameLabel)
+        mainStack.addArrangedSubview(descriptionLabel)
+        
+        self.addSubview(mainStack)
     }
     
     private func activateConstraints() {
+        mainStack.setCustomSpacing(16, after: coverImage)
+        mainStack.setCustomSpacing(8, after: nameLabel)
+        
+        NSLayoutConstraint.activate([
+            coverImage.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor),
+            coverImage.trailingAnchor.constraint(equalTo: mainStack.trailingAnchor),
+            coverImage.heightAnchor.constraint(equalToConstant: 300),
+            
+            nameLabel.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor, constant: 16),
+            nameLabel.trailingAnchor.constraint(equalTo: mainStack.trailingAnchor, constant: -16),
+            
+            descriptionLabel.leadingAnchor.constraint(equalTo: mainStack.leadingAnchor, constant: 16),
+            // workaround to get correct display of label and remove UIKit constraints conflict from log
+            descriptionLabel.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 32),
+        ])
+        
         mainStack.translatesAutoresizingMaskIntoConstraints = false
         
         let mainStackTrailingConstraint = mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor)

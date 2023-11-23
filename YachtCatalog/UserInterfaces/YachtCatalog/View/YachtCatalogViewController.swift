@@ -31,14 +31,8 @@ final class YachtCatalogViewController: UIViewController {
         addSubviews()
         activateConstraints()
         subscribeToPublishers()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        if viewModel.catalogModels.isEmpty {
-            viewModel.loadData()
-        }
+        viewModel.loadCatalogs()
     }
     
     // MARK: Private functions

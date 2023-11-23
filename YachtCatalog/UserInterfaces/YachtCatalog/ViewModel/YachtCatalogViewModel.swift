@@ -9,7 +9,7 @@ final class YachtCatalogViewModel {
     
     // MARK: Internal functions
     
-    func loadData() {
+    func loadCatalogs() {
         catalogModels = DataProvider.shared.provideData()
         sortCatalogs(by: SortTypeStorage.shared.sortType)
     }
