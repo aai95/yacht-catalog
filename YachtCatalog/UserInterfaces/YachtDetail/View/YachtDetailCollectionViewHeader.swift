@@ -1,7 +1,7 @@
 import UIKit
 import Kingfisher
 
-final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultReusableCell {
+final class YachtDetailCollectionViewHeader: UICollectionReusableView, DefaultReusableView {
     
     // MARK: Internal properties
     

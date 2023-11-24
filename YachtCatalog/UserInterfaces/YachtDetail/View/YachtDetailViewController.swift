@@ -12,8 +12,8 @@ final class YachtDetailViewController: UIViewController {
     private lazy var yachtCollection: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         
-        collection.register(YachtDetailCollectionViewCell.self)
-        collection.register(YachtDetailCollectionViewHeader.self, of: UICollectionView.elementKindSectionHeader)
+        collection.registerDefault(YachtDetailCollectionViewCell.self)
+        collection.registerDefaultHeader(YachtDetailCollectionViewHeader.self)
         
         collection.dataSource = self
         collection.delegate = self
@@ -103,13 +103,13 @@ extension YachtDetailViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: YachtDetailCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: YachtDetailCollectionViewCell = collectionView.dequeueDefaultReusableCell(for: indexPath)
         cell.photoLink = viewModel.detailModel.photoLinks[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header: YachtDetailCollectionViewHeader = collectionView.dequeueReusableSupplementaryView(of: kind, for: indexPath)
+        let header: YachtDetailCollectionViewHeader = collectionView.dequeueDefaultReusableSupplementaryView(of: kind, for: indexPath)
         header.detailModel = viewModel.detailModel
         return header
     }

@@ -1,7 +1,7 @@
 import UIKit
 import Kingfisher
 
-final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusableCell {
+final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusableView {
     
     // MARK: Internal properties
     
@@ -10,14 +10,14 @@ final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusable
             guard let photoLink = photoLink else {
                 return
             }
-            yachtImage.kf.indicatorType = .activity
-            yachtImage.kf.setImage(with: URL(string: photoLink))
+            photoImage.kf.indicatorType = .activity
+            photoImage.kf.setImage(with: URL(string: photoLink))
         }
     }
     
     // MARK: Private properties
     
-    private let yachtImage: UIImageView = {
+    private let photoImage: UIImageView = {
         let image = UIImageView()
         
         image.layer.masksToBounds = true
@@ -45,23 +45,23 @@ final class YachtDetailCollectionViewCell: UICollectionViewCell, DefaultReusable
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        yachtImage.kf.cancelDownloadTask()
+        photoImage.kf.cancelDownloadTask()
     }
     
     // MARK: Private functions
     
     private func addSubviews() {
-        contentView.addSubview(yachtImage)
+        contentView.addSubview(photoImage)
     }
     
     private func activateConstraints() {
-        yachtImage.translatesAutoresizingMaskIntoConstraints = false
+        photoImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            yachtImage.topAnchor.constraint(equalTo: contentView.topAnchor),
-            yachtImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            yachtImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            yachtImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            photoImage.topAnchor.constraint(equalTo: contentView.topAnchor),
+            photoImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            photoImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            photoImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
 }

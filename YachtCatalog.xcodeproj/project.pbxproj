@@ -13,7 +13,7 @@
 		8E2412CF2B02336200EF9C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2412CD2B02336200EF9C07 /* LaunchScreen.storyboard */; };
 		8E9CDCAD2B027520002FAA67 /* YachtCatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCAC2B027520002FAA67 /* YachtCatalogModel.swift */; };
 		8E9CDCAF2B027568002FAA67 /* YachtCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCAE2B027568002FAA67 /* YachtCatalogViewModel.swift */; };
-		8E9CDCB22B027E9D002FAA67 /* CellReusingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCB12B027E9D002FAA67 /* CellReusingExtensions.swift */; };
+		8E9CDCB22B027E9D002FAA67 /* ReusableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCB12B027E9D002FAA67 /* ReusableViewExtensions.swift */; };
 		8E9CDCB42B028CB3002FAA67 /* YachtCatalogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCB32B028CB3002FAA67 /* YachtCatalogTableViewCell.swift */; };
 		8E9CDCBA2B04CE2C002FAA67 /* YachtDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCB92B04CE2C002FAA67 /* YachtDetailModel.swift */; };
 		8E9CDCBC2B04CE5E002FAA67 /* YachtDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CDCBB2B04CE5E002FAA67 /* YachtDetailCollectionViewCell.swift */; };
@@ -35,7 +35,7 @@
 		8E2412D02B02336200EF9C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E9CDCAC2B027520002FAA67 /* YachtCatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtCatalogModel.swift; sourceTree = "<group>"; };
 		8E9CDCAE2B027568002FAA67 /* YachtCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtCatalogViewModel.swift; sourceTree = "<group>"; };
-		8E9CDCB12B027E9D002FAA67 /* CellReusingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusingExtensions.swift; sourceTree = "<group>"; };
+		8E9CDCB12B027E9D002FAA67 /* ReusableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewExtensions.swift; sourceTree = "<group>"; };
 		8E9CDCB32B028CB3002FAA67 /* YachtCatalogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtCatalogTableViewCell.swift; sourceTree = "<group>"; };
 		8E9CDCB92B04CE2C002FAA67 /* YachtDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtDetailModel.swift; sourceTree = "<group>"; };
 		8E9CDCBB2B04CE5E002FAA67 /* YachtDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YachtDetailCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		8E9CDCB02B027C81002FAA67 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8E9CDCB12B027E9D002FAA67 /* CellReusingExtensions.swift */,
+				8E9CDCB12B027E9D002FAA67 /* ReusableViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 				8E9CDCBE2B04CE99002FAA67 /* YachtDetailViewController.swift in Sources */,
 				8E2412C72B02336000EF9C07 /* YachtCatalogViewController.swift in Sources */,
 				8E2412C32B02336000EF9C07 /* AppDelegate.swift in Sources */,
-				8E9CDCB22B027E9D002FAA67 /* CellReusingExtensions.swift in Sources */,
+				8E9CDCB22B027E9D002FAA67 /* ReusableViewExtensions.swift in Sources */,
 				8E9CDCB42B028CB3002FAA67 /* YachtCatalogTableViewCell.swift in Sources */,
 				8E9CDCC22B05003B002FAA67 /* YachtDetailCollectionViewHeader.swift in Sources */,
 				8E9CDCAF2B027568002FAA67 /* YachtCatalogViewModel.swift in Sources */,

@@ -11,7 +11,7 @@ final class YachtCatalogViewController: UIViewController {
     private lazy var catalogTable: UITableView = {
         let table = UITableView(frame: .zero)
         
-        table.register(YachtCatalogTableViewCell.self)
+        table.registerDefault(YachtCatalogTableViewCell.self)
         table.dataSource = self
         table.delegate = self
         
@@ -128,7 +128,7 @@ extension YachtCatalogViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: YachtCatalogTableViewCell = tableView.dequeueReusableCell()
+        let cell: YachtCatalogTableViewCell = tableView.dequeueDefaultReusableCell()
         cell.catalogModel = viewModel.catalogModels[indexPath.row]
         return cell
     }
